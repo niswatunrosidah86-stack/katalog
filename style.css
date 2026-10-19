@@ -1,0 +1,716 @@
+
+/* =========================
+   KOPINESIA - STYLE CSS
+   Tema cafe aesthetic
+   ========================= */
+
+:root {
+    --cream: #f7f0e7;
+    --paper: #fffaf3;
+    --coffee: #4b2d20;
+    --dark: #2f1b13;
+    --caramel: #a56f49;
+    --muted: #796b61;
+    --line: #e3d5c7;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* NAVBAR */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px 5%;
+    background: rgba(255, 250, 243, 0.96);
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 35px;
+}
+
+.logo strong {
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    line-height: 1.2;
+}
+
+.logo small {
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navbar nav a {
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+    color: var(--caramel);
+}
+
+.header-tools {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#searchInput {
+    width: 190px;
+    padding: 10px 15px;
+    border: 1px solid #cdb9a7;
+    border-radius: 30px;
+    outline: none;
+    background: var(--paper);
+    color: var(--dark);
+    font-size: 12px;
+}
+
+#searchInput:focus {
+    border-color: var(--caramel);
+    box-shadow: 0 0 0 3px #a56f4920;
+}
+
+.theme-toggle,
+.menu-toggle {
+    border: none;
+    background: transparent;
+    color: var(--coffee);
+    font-size: 25px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* HERO */
+
+.hero {
+    position: relative;
+    min-height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(38, 22, 13, 0.65),
+            rgba(38, 22, 13, 0.65)
+        ),
+        url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=2000&q=85")
+        center / cover no-repeat;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.eyebrow {
+    color: var(--caramel);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.hero .eyebrow {
+    color: #e8cdb2;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    font-style: italic;
+    text-transform: none;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(36px, 5vw, 62px);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero-content > p:not(.eyebrow) {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    color: #f8eee3;
+    font-size: 14px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 12px 22px;
+    border: 1px solid #d8b99a;
+    border-radius: 30px;
+    background: #805638;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: #a16f49;
+    transform: translateY(-3px);
+}
+
+.hero-note {
+    position: absolute;
+    right: 5%;
+    top: 30%;
+    max-width: 145px;
+    color: #f3ddc7;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    font-style: italic;
+    transform: rotate(5deg);
+}
+
+/* KATALOG */
+
+.catalog {
+    max-width: 1550px;
+    margin: auto;
+    padding: 60px 4%;
+}
+
+.section-intro {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.section-intro h2,
+.about-section h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(28px, 3vw, 40px);
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.section-intro > p:last-child {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* FILTER */
+
+.filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.filter-button {
+    padding: 9px 19px;
+    border: 1px solid var(--line);
+    border-radius: 30px;
+    background: var(--paper);
+    color: var(--coffee);
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.filter-button:hover,
+.filter-button.active {
+    background: var(--coffee);
+    border-color: var(--coffee);
+    color: white;
+}
+
+/* JUDUL KATEGORI */
+
+.coffee-category {
+    margin-bottom: 55px;
+}
+
+.category-heading {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.6fr;
+    align-items: center;
+    gap: 25px;
+    padding-bottom: 18px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--line);
+}
+
+.category-heading h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(23px, 2.5vw, 31px);
+    line-height: 1.3;
+}
+
+.category-heading em {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.category-heading > p {
+    padding-left: 20px;
+    border-left: 1px solid var(--caramel);
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.category-note {
+    padding: 12px;
+    border-radius: 20px;
+    background: #e9dccd;
+    color: var(--coffee);
+    font-family: Georgia, serif;
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+}
+
+/* KARTU PRODUK */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.product-card {
+    display: grid;
+    grid-template-columns: 42% 1fr;
+    gap: 14px;
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--paper);
+    box-shadow: 0 5px 18px #38231608;
+    transition: transform 0.3s, box-shadow 0.3s;
+    min-width: 0;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px #38231615;
+}
+
+.product-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 220px;
+    object-fit: cover;
+    border-radius: 9px;
+    background: #e6d8ca;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3px 0;
+    min-width: 0;
+}
+
+.product-tag {
+    color: var(--caramel);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.product-info h3 {
+    margin-top: 5px;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.subtitle {
+    margin: 3px 0 10px;
+    color: var(--muted);
+    font-family: Georgia, serif;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.product-info > p:not(.subtitle) {
+    margin: 5px 0 12px;
+    color: #62564d;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.product-info blockquote {
+    margin: auto 0 12px;
+    padding-left: 10px;
+    border-left: 2px solid #c6a182;
+    color: #7b5b43;
+    font-family: Georgia, serif;
+    font-size: 11px;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.detail-button {
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: var(--coffee);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.detail-button:hover {
+    color: var(--caramel);
+    text-decoration: underline;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+.empty-state {
+    padding: 30px;
+    color: var(--muted);
+    text-align: center;
+}
+
+/* TENTANG KAMI */
+
+.about-section {
+    padding: 65px 20px;
+    background: #eee2d5;
+    text-align: center;
+}
+
+.about-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 15px;
+    border: 1px solid #c9ad94;
+    border-radius: 50%;
+    color: var(--caramel);
+    font-size: 24px;
+}
+
+.about-section > p:not(.eyebrow) {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.text-link {
+    color: var(--coffee);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    padding: 35px 20px 25px;
+    background: #3b2418;
+    color: #f9eee3;
+    text-align: center;
+}
+
+.footer-brand {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+}
+
+footer p {
+    color: #e4cdb7;
+    font-family: Georgia, serif;
+    font-size: 13px;
+    font-style: italic;
+}
+
+footer small {
+    margin-top: 12px;
+    color: #cbb29c;
+    font-size: 10px;
+}
+
+/* MODE GELAP */
+
+body.dark-mode {
+    --cream: #201a16;
+    --paper: #2c231d;
+    --coffee: #d7b493;
+    --dark: #f4e8dc;
+    --muted: #c2afa0;
+    --line: #514034;
+    --caramel: #d5a77f;
+}
+
+body.dark-mode .navbar {
+    background: rgba(39, 29, 23, 0.97);
+}
+
+body.dark-mode .product-info > p:not(.subtitle) {
+    color: #d1c1b3;
+}
+
+body.dark-mode .category-note,
+body.dark-mode .about-section {
+    background: #392c22;
+    color: #e9d2bb;
+}
+
+body.dark-mode .filter-button.active {
+    background: #d7b493;
+    color: #24180f;
+}
+
+/* RESPONSIVE TABLET */
+
+@media (max-width: 1100px) {
+    .navbar {
+        gap: 14px;
+        padding-inline: 22px;
+    }
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+    #searchInput {
+        width: 145px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .category-heading {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .category-note {
+        display: none;
+    }
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width: 720px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 12px 16px;
+    }
+
+    .logo strong {
+        font-size: 22px;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .header-tools {
+        order: 3;
+        width: 100%;
+    }
+
+    #searchInput {
+        width: 100%;
+        flex: 1;
+    }
+
+    .navbar nav {
+        display: none;
+        order: 4;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .navbar nav.open {
+        display: flex;
+    }
+
+    .navbar nav a {
+        padding: 10px 5px;
+        border-top: 1px solid var(--line);
+    }
+
+    .hero {
+        min-height: 330px;
+    }
+
+    .hero h1 {
+        font-size: clamp(35px, 9vw, 48px);
+    }
+
+    .hero-note {
+        display: none;
+    }
+
+    .catalog {
+        padding: 40px 15px;
+    }
+
+    .category-heading {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .category-heading > p {
+        padding-left: 14px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        grid-template-columns: 40% 1fr;
+        gap: 12px;
+    }
+
+    .product-card img {
+        min-height: 210px;
+    }
+
+    .about-section {
+        padding: 50px 20px;
+    }
+}
+
+/* HP KECIL */
+
+@media (max-width: 390px) {
+    .product-card {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card img {
+        height: 230px;
+        min-height: 0;
+    }
+
+    .product-info > p:not(.subtitle) {
+        font-size: 12px;
+    }
+}
+
+/* FOTO BISA DIKLIK */
+
+.product-card img {
+    cursor: pointer;
+    transition: transform 0.35s, filter 0.35s;
+}
+
+.product-card img:hover {
+    filter: brightness(0.88);
+}
+
+/* DESKRIPSI DISEMBUNYIKAN SEBELUM FOTO DIKLIK */
+
+.product-info > p:not(.subtitle),
+.product-info blockquote {
+    display: none;
+}
+
+/* DESKRIPSI MUNCUL SETELAH FOTO DIKLIK */
+
+.product-card.show-description .product-info > p:not(.subtitle),
+.product-card.show-description .product-info blockquote {
+    display: block;
+    animation: deskripsiMasuk 0.35s ease;
+}
+
+.product-card.show-description img {
+    filter: brightness(0.95);
+}
+
+.product-card.show-description .detail-button {
+    color: var(--caramel);
+}
+
+@keyframes deskripsiMasuk {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FOTO PRODUK LIBERIKA */
+.product-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 220px;
+    object-fit: cover;
+    border-radius: 9px;
+    background-color: #e6d8ca;
+}

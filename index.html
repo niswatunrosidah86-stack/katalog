@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KopiNesia | Galeri Kopi</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="#beranda" class="logo">
+            <span class="logo-icon">☕</span>
+            <span>
+                <strong>KopiNesia</strong>
+                <small>Gallery & Catalog</small>
+            </span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle">☰</button>
+
+        <nav id="navLinks">
+            <a href="#beranda">Beranda</a>
+            <a href="#katalog">Katalog</a>
+            <a href="#tentang">Tentang Kami</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
+
+        <div class="header-tools">
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Cari minuman favoritmu..."
+            >
+            <button id="themeToggle" class="theme-toggle"
+                aria-label="Ganti tema">☼</button>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="beranda">
+        <div class="hero-content">
+            <p class="eyebrow">Selamat datang di</p>
+            <h1>Katalog Galeri Foto</h1>
+            <p>
+                Nikmati keindahan rasa dari berbagai jenis kopi terbaik
+                yang kami sajikan dalam setiap gambar.
+            </p>
+            <a href="#katalog" class="hero-button">
+                Jelajahi Katalog ↓
+            </a>
+        </div>
+
+        <div class="hero-note">
+            Setiap cangkir punya cerita,
+            setiap rasa punya makna. ♡
+        </div>
+    </section>
+
+    <!-- KATALOG -->
+    <main class="catalog" id="katalog">
+        <div class="section-intro">
+            <p class="eyebrow">Temukan favoritmu</p>
+            <h2>Rasa yang Punya Cerita</h2>
+            <p>
+                Dari aroma yang menenangkan sampai racikan yang
+                menyegarkan, temukan kopi yang cocok untuk menemani harimu.
+            </p>
+        </div>
+
+        <!-- FILTER -->
+        <div class="filters">
+            <button class="filter-button active" data-filter="semua">
+                Semua Kopi
+            </button>
+            <button class="filter-button" data-filter="arabika">
+                Arabika
+            </button>
+            <button class="filter-button" data-filter="robusta">
+                Robusta
+            </button>
+            <button class="filter-button" data-filter="liberika">
+                Liberika
+            </button>
+        </div>
+
+        <!-- KOPI ARABIKA -->
+        <section class="coffee-category" data-category="arabika">
+            <div class="category-heading">
+                <div>
+                    <h2>☕ Kopi Arabika</h2>
+                    <em>(Coffea arabica)</em>
+                </div>
+                <p>
+                    Dikenal dengan rasa yang halus, aroma harum,
+                    dan tingkat keasaman yang seimbang.
+                </p>
+                <span class="category-note">
+                    Rasa terbaik untuk hari yang lebih baik ♡
+                </span>
+            </div>
+
+            <div class="product-grid">
+
+                <article class="product-card"
+                    data-name="kopi hitam murni arabika manual brew filter coffee">
+                    <img
+                        src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=85"
+                        alt="Kopi hitam murni"
+                        loading="lazy">
+                    <div class="product-info">
+                        <span class="product-tag">ARABIKA · 01</span>
+                        <h3>Kopi Hitam Murni</h3>
+                        <p class="subtitle">
+                            (Manual Brew & Filter Coffee)
+                        </p>
+                        <p>
+                            Rasa kopi yang autentik tanpa campuran.
+                            Cocok untuk menikmati aroma dan cita rasa
+                            asli kopi.
+                        </p>
+                        <blockquote>
+                            "Hal-hal baik dimulai dari secangkir
+                            kopi yang sederhana."
+                        </blockquote>
+                        <button class="detail-button">Lihat detail ↗</button>
+                    </div>
+                </article>
+
+                <article class="product-card"
+                    data-name="kopi dingin modern cold brew cold drip">
+                    <img
+                        src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=85"
+                        alt="Kopi dingin modern"
+                        loading="lazy">
+                    <div class="product-info">
+                        <span class="product-tag">ARABIKA · 02</span>
+                        <h3>Kopi Dingin Modern</h3>
+                        <p class="subtitle">(Cold Brew & Cold Drip)</p>
+                        <p>
+                            Sensasi dingin yang menyegarkan dengan
+                            rasa lembut dan sedikit manis alami.
+                        </p>
+                        <blockquote>
+                            "Dingin di luar, semangat di dalam."
+                        </blockquote>
+                        <button class="detail-button">Lihat detail ↗</button>
+                    </div>
+                </article>
+
+                <article class="product-card"
+                    data-name="minuman berbasis espresso single origin espresso">
+                    <img
+                        src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=800&q=85"
+                        alt="Espresso dalam cangkir"
+                        loading="lazy">
+                    <div class="product-info">
+                        <span class="product-tag">ARABIKA · 03</span>
+                        <h3>Minuman Berbasis Espresso</h3>
+                        <p class="subtitle">(Single-Origin Espresso)</p>
+                        <p>
+                            Kopi dengan karakter khas dari satu daerah
+                            asal, memiliki aroma kuat dan berkelas.
+                        </p>
+                        <blockquote>
+                            "Rasa kecil, energi besar untuk langkahmu."
+                        </blockquote>
+                        <button class="detail-button">Lihat detail ↗</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- KOPI ROBUSTA -->
+        <section class="coffee-category" data-category="robusta">
+            <div class="category-heading">
+                <div>
+                    <h2>☕ Kopi Robusta</h2>
+                    <em>(Coffea canephora)</em>
+                </div>
+                <p>
+                    Memiliki rasa yang lebih kuat, body yang tebal,
+                    dan kandungan kafein yang tinggi.
+                </p>
+                <span class="category-note">
+                    Kuat rasanya, besar semangatnya ♡
+                </span>
+            </div>
+
+            <div class="product-grid">
+
+                <article class="product-card"
+                    data-name="kopi susu kekinian es kopi susu aren">
+                    <img
+                        src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=800&q=85"
+                        alt="Es kopi susu gula aren"
+                        loading="lazy">
+                    <div class="product-info">
+                        <span class="product-tag">ROBUSTA · 01</span>
+                        <h3>Kopi Susu Kekinian</h3>
+                        <p class="subtitle">& Es Kopi Susu Aren</p>
+                        <p>
+                            Perpaduan kopi yang kuat dengan susu lembut
+                            dan manisnya gula aren yang khas.
+                        </p>
+                        <blockquote>
+                            "Nikmati prosesnya, nikmati hasilnya."
+                        </blockquote>
+                        <button class="detail-button">Lihat detail ↗</button>
+                    </div>
+                </article>
+
+                <article class="product-card"
+                    data-name="kopi tradisional kopi tubruk">
+                    <img
+                        src="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&fit=crop&w=800&q=85"
+                        alt="Kopi tradisional"
+                        loading="lazy">
+                    <div class="product-info">
+                        <span class="product-tag">ROBUSTA · 02</span>
+                        <h3>Kopi Tradisional & Kopi Tubruk</h3>
+                        <p class="subtitle">Cara seduh klasik</p>
+                        <p>
+                            Cara klasik yang tak pernah lekang oleh
+                            waktu. Sederhana, tetapi selalu istimewa.
+                        </p>
+                        <blockquote>
+                            "Kembali ke yang sederhana, temukan ketenangan."
+                        </blockquote>
+                        <button class="detail-button">Lihat detail ↗</button>
+                    </div>
+                </article>
+
+                <article class="product-card"
+                    data-name="kopi telur egg coffee ca phe trung">
+                    <img
+                        src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=800&q=85"
+                        alt="Kopi telur"
+                        loading="lazy">
+                    <div class="product-info">
+                        <span class="product-tag">ROBUSTA · 03</span>
+                        <h3>Kopi Telur</h3>
+                        <p class="subtitle">(Egg Coffee / Cà Phê Trứng)</p>
+                        <p>
+                            Perpaduan kopi dan telur yang creamy,
+                            menghasilkan rasa unik dan lembut.
+                        </p>
+                        <blockquote>
+                            "Rasa unik, untuk hari yang luar biasa."
+                        </blockquote>
+                        <button class="detail-button">Lihat detail ↗</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- KOPI LIBERIKA -->
+        <section class="coffee-category" data-category="liberika">
+            <div class="category-heading">
+                <div>
+                    <h2>☕ Kopi Liberika</h2>
+                    <em>(Coffea liberica)</em>
+                </div>
+                <p>
+                    Memiliki aroma yang khas, rasa yang kompleks,
+                    dan karakter yang unik.
+                </p>
+                <span class="category-note">
+                    Jelajahi rasa baru, luaskan dunia kopi ♡
+                </span>
+            </div>
+
+            <div class="product-grid">
+
+                <article class="product-card"
+                    data-name="liberica coconut coffee kopi kelapa">
+                    <img
+    src="foto-liberica-coconut.jpg"
+    alt="Liberica Coconut Coffee (Kopi Kelapa)"
+    loading="lazy"
+>
+                    <div class="product-info">
+                        <span class="product-tag">LIBERIKA · 01</span>
+                        <h3>Liberica Coconut Coffee</h3>
+                        <p class="subtitle">(Kopi Kelapa)</p>
+                        <p>
+                            Perpaduan kopi Liberika dengan rasa kelapa
+                            yang lembut dan menyegarkan.
+                        </p>
+                        <blockquote>
+                            "Tenangkan pikiran, segarkan semangat."
+                        </blockquote>
+                        <button class="detail-button">Lihat detail ↗</button>
+                    </div>
+                </article>
+
+                <article class="product-card"
+                    data-name="citrus liberica soda jeruk">
+                    <img
+    src="foto-citrus-liberica.jpg"
+    alt="Citrus Liberica Soda"
+    loading="lazy"
+>
+                    <div class="product-info">
+                        <span class="product-tag">LIBERIKA · 02</span>
+                        <h3>Citrus Liberica Soda</h3>
+                        <p class="subtitle">Segar dan berkarakter</p>
+                        <p>
+                            Kombinasi kopi Liberika dengan jeruk dan
+                            soda yang memberi sensasi menyegarkan.
+                        </p>
+                        <blockquote>
+                            "Segar, berbeda, dan selalu bersemangat."
+                        </blockquote>
+                        <button class="detail-button">Lihat detail ↗</button>
+                    </div>
+                </article>
+
+                <article class="product-card"
+                    data-name="liberica cascara fizz">
+                    <img
+                        src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=800&q=85"
+                        alt="Liberica cascara fizz"
+                        loading="lazy">
+                    <div class="product-info">
+                        <span class="product-tag">LIBERIKA · 03</span>
+                        <h3>Liberica Cascara Fizz</h3>
+                        <p class="subtitle">Soda cascara menyegarkan</p>
+                        <p>
+                            Kulit buah kopi atau cascara dipadukan
+                            dengan soda untuk sensasi ringan dan segar.
+                        </p>
+                        <blockquote>
+                            "Kebaikan alam dalam setiap tegukan."
+                        </blockquote>
+                        <button class="detail-button">Lihat detail ↗</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <p id="emptyState" class="empty-state" hidden>
+            Minuman tidak ditemukan. Coba kata kunci lain, ya! ☕
+        </p>
+    </main>
+
+    <!-- TENTANG KAMI -->
+    <section class="about-section" id="tentang">
+        <div class="about-icon">✳</div>
+        <p class="eyebrow">Sedikit cerita dari kami</p>
+        <h2>Kopi bukan hanya minuman,<br>tapi juga inspirasi.</h2>
+        <p>
+            KopiNesia adalah galeri digital untuk mengenal ragam kopi
+            dan racikan minuman. Setiap cangkir punya karakter,
+            dan setiap hari selalu punya kesempatan baru.
+        </p>
+        <a href="#katalog" class="text-link">
+            Temukan inspirasi berikutnya →
+        </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="kontak">
+        <a class="footer-brand" href="#beranda">☕ KopiNesia</a>
+        <p>Semoga harimu hangat, seperti kopi favoritmu. ♡</p>
+        <small>© <span id="year"></span> KopiNesia · Dibuat dengan sepenuh hati</small>
+    </footer>
+
+</body>
+</html>
